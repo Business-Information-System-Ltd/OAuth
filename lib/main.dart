@@ -19,13 +19,15 @@ class MyOAuthClient extends OAuth2Client {
         );
 }
 
-const String clientId = 'K3PDnpkOeUUvtgFXYmsYNwFP0Xg0oyX1GUJeFboK';
-const String clientSecret = '01FXGYbfdIwCIS9U5yp145B3bdVfUMkfeaYMJ0RxtDKSoIMED3Vpw8VZgSoWz3BmiB3RRFZNMu94nxyNxoHawHhPwg7knAd2n73TSmrY6RTEMu5lS7eVw2nOliuiba92';
-
+// const String clientId = 'K3PDnpkOeUUvtgFXYmsYNwFP0Xg0oyX1GUJeFboK';
+// const String clientSecret = '01FXGYbfdIwCIS9U5yp145B3bdVfUMkfeaYMJ0RxtDKSoIMED3Vpw8VZgSoWz3BmiB3RRFZNMu94nxyNxoHawHhPwg7knAd2n73TSmrY6RTEMu5lS7eVw2nOliuiba92';
+const String clientId ='';
+const String clientSecret ='';
 final oauthHelper = OAuth2Helper(
   MyOAuthClient(),
   clientId:clientId,
   clientSecret:clientSecret,
+  scopes: ['read', 'write'],
   // clientId: clientId,
   // clientSecret: clientSecret,
   // scopes: ['read', 'write'],
