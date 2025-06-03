@@ -19,15 +19,16 @@ class MyOAuthClient extends OAuth2Client {
         );
 }
 
-// Config: Leave clientId and clientSecret blank
-const String clientId = '';
-const String clientSecret = '';
+const String clientId = 'K3PDnpkOeUUvtgFXYmsYNwFP0Xg0oyX1GUJeFboK';
+const String clientSecret = '01FXGYbfdIwCIS9U5yp145B3bdVfUMkfeaYMJ0RxtDKSoIMED3Vpw8VZgSoWz3BmiB3RRFZNMu94nxyNxoHawHhPwg7knAd2n73TSmrY6RTEMu5lS7eVw2nOliuiba92';
 
 final oauthHelper = OAuth2Helper(
   MyOAuthClient(),
-  clientId: clientId,
-  clientSecret: clientSecret,
-  scopes: ['read', 'write'],
+  clientId:clientId,
+  clientSecret:clientSecret,
+  // clientId: clientId,
+  // clientSecret: clientSecret,
+  // scopes: ['read', 'write'],
   //enablePKCE: true,
   //grantType: OAuth2Helper.AUTHORIZATION_CODE_PKCE,
 );
@@ -67,13 +68,13 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isOAuthConfigured = clientId.isNotEmpty && clientSecret.isNotEmpty;
+   // final isOAuthConfigured = clientId.isNotEmpty && clientSecret.isNotEmpty;
 
     return Scaffold(
       appBar: AppBar(title: Text('Login With OAuth 2')),
       body: Center(
         child: ElevatedButton(
-          onPressed: isOAuthConfigured ? () => login(context) : null,
+          onPressed: () => login(context),
           child: Text('Login',style: TextStyle(color: Colors.blueAccent),),
         ),
       ),
